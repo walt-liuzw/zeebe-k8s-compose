@@ -308,33 +308,33 @@ data:
     #
     # An example configuration for the elasticsearch exporter:
     #
-    [[exporters]]
-    id = "elasticsearch"
-    className = "io.zeebe.exporter.ElasticsearchExporter"
-      [exporters.args]
-      url = "http://elasticsearch.zeebe:9200"
+    #[[exporters]]
+    #id = "elasticsearch"
+    #className = "io.zeebe.exporter.ElasticsearchExporter"
+    #  [exporters.args]
+    #  url = "http://elasticsearch.zeebe:9200"
+    #
+    #  [exporters.args.bulk]
+    #  delay = 5
+    #  size = 1_000
+    #
+    #  #[exporters.args.authentication]
+    #  #username = elastic
+    #  #password = changeme
+    #
+    #  [exporters.args.index]
+    #  prefix = "zeebe-record"
+    #  createTemplate = true
 
-      [exporters.args.bulk]
-      delay = 5
-      size = 1_000
+       command = false
+       event = true
+       rejection = false
 
-      #[exporters.args.authentication]
-      #username = elastic
-      #password = changeme
-
-      [exporters.args.index]
-      prefix = "zeebe-record"
-      createTemplate = true
-
-      command = false
-      event = true
-      rejection = false
-
-      deployment = true
-      incident = true
-      job = true
-      message = false
-      messageSubscription = false
-      raft = false
-      workflowInstance = true
-      workflowInstanceSubscription = false
+       deployment = true
+       incident = true
+       job = true
+       message = false
+       messageSubscription = false
+       raft = false
+       workflowInstance = true
+       workflowInstanceSubscription = false
